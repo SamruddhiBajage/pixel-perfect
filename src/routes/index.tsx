@@ -116,7 +116,7 @@ function Index() {
             <p className="mt-4 max-w-[56ch] text-pretty text-ink-soft">I like hands-on work — wiring up an ESP32, building a small web app, or untangling a tricky bug — and I learn best by building, breaking and rebuilding.</p>
             <div className="mt-8 flex flex-wrap gap-x-10 gap-y-3 text-sm">
               <div><span className="block font-display font-medium text-3xl">92.46%</span><span className="text-ink-soft">Diploma</span></div>
-              <div><span className="block font-display font-medium text-3xl">93%</span><span className="text-ink-soft">SSC</span></div>
+              <div className="w-full"><span className="block font-display font-medium text-3xl leading-snug">Projects • Development • Technology</span></div>
               <div><span className="block font-display font-medium text-3xl">9</span><span className="text-ink-soft">Certifications</span></div>
             </div>
           </div>
