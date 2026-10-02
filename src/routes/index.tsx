@@ -19,6 +19,10 @@ export const Route = createFileRoute("/")({
 
 const nav = ["Home", "About", "Education", "Skills", "Projects", "Experience", "Certifications", "Achievements", "Resume", "Contact"];
 
+const EMAIL = "samruddhibajage1978@gmail.com";
+const GITHUB_URL = "https://github.com/SamruddhiBajage";
+const LINKEDIN_URL = "https://www.linkedin.com/in/samruddhibajage";
+
 const education = [
   { years: "Currently pursuing", title: "B.Tech in Computer Engineering", place: "Vidyalankar Institute of Technology", note: "2024 – 2027", dot: "bg-terracotta" },
   { years: "Diploma", title: "Diploma in Computer Engineering", place: "Vidyalankar Polytechnic", note: "Percentage: 92.46%", dot: "bg-sage" },
@@ -102,8 +106,8 @@ function Index() {
           <a href="#projects" className="bg-terracotta text-primary-foreground text-sm px-5 py-2.5 rounded-full hover:bg-ink transition-colors">View My Projects</a>
           <button type="button" disabled title="Resume coming soon" className="bg-panel text-ink-soft text-sm px-5 py-2.5 rounded-full ring-1 ring-ink/10 cursor-not-allowed opacity-70">Download Resume</button>
           <span className="mx-1 h-6 w-px bg-line" />
-          <span title="Add your GitHub profile" aria-label="GitHub profile not added yet" className="size-10 grid place-items-center rounded-full ring-1 ring-ink/10 text-ink-soft opacity-60 cursor-not-allowed"><GitHubIcon /></span>
-          <span title="Add your LinkedIn profile" aria-label="LinkedIn profile not added yet" className="size-10 grid place-items-center rounded-full ring-1 ring-ink/10 text-ink-soft opacity-60 cursor-not-allowed"><LinkedInIcon /></span>
+          <a href={GITHUB_URL} target="_blank" rel="noreferrer" aria-label="GitHub profile" className="size-10 grid place-items-center rounded-full ring-1 ring-ink/10 text-ink-soft hover:text-ink hover:ring-ink/30 transition-colors"><GitHubIcon /></a>
+          <a href={LINKEDIN_URL} target="_blank" rel="noreferrer" aria-label="LinkedIn profile" className="size-10 grid place-items-center rounded-full ring-1 ring-ink/10 text-ink-soft hover:text-ink hover:ring-ink/30 transition-colors"><LinkedInIcon /></a>
         </div>
       </section>
 
@@ -240,9 +244,9 @@ function Index() {
             <h2 className="font-display font-medium text-4xl leading-tight max-w-[20ch] text-balance">Let's build something worth keeping.</h2>
             <p className="mt-4 max-w-[48ch] text-paper/70">Open to internships, collaborations and interesting projects.</p>
             <div className="mt-8 space-y-3 text-sm">
-              <p className="text-paper/80"><span className="text-paper">Email</span> — Add your email</p>
-              <p className="flex items-center gap-2 text-paper/80"><GitHubIcon /> <span className="text-paper">GitHub</span> — Add your GitHub profile</p>
-              <p className="flex items-center gap-2 text-paper/80"><LinkedInIcon /> <span className="text-paper">LinkedIn</span> — Add your LinkedIn profile</p>
+              <p className="text-paper/80"><a href={`mailto:${EMAIL}`} className="text-paper hover:text-terracotta transition-colors">{EMAIL}</a></p>
+              <p className="flex items-center gap-2 text-paper/80"><GitHubIcon /> <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="text-paper hover:text-terracotta transition-colors">github.com/SamruddhiBajage</a></p>
+              <p className="flex items-center gap-2 text-paper/80"><LinkedInIcon /> <a href={LINKEDIN_URL} target="_blank" rel="noreferrer" className="text-paper hover:text-terracotta transition-colors">linkedin.com/in/samruddhibajage</a></p>
             </div>
           </div>
           <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); setSent(true); e.currentTarget.reset(); }}>
@@ -264,8 +268,8 @@ function Index() {
         <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
           <p>© 2026 Samruddhi Bajage. All rights reserved.</p>
           <div className="flex gap-4">
-            <span title="Add your GitHub profile" aria-label="GitHub profile not added yet"><GitHubIcon /></span>
-            <span title="Add your LinkedIn profile" aria-label="LinkedIn profile not added yet"><LinkedInIcon /></span>
+            <a href={GITHUB_URL} target="_blank" rel="noreferrer" aria-label="GitHub profile" className="hover:text-paper transition-colors"><GitHubIcon /></a>
+            <a href={LINKEDIN_URL} target="_blank" rel="noreferrer" aria-label="LinkedIn profile" className="hover:text-paper transition-colors"><LinkedInIcon /></a>
           </div>
         </div>
       </footer>
