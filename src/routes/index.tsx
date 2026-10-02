@@ -38,7 +38,7 @@ const projects = [
   { n: "02", tag: "IoT · Cloud", title: "AirGuard – Smart Classroom Air Quality Monitoring", desc: "An IoT-based classroom air-quality monitoring project using ESP32 and sensors to monitor environmental conditions such as air quality, temperature and humidity, with cloud-based data visualization.", tech: ["ESP32", "IoT", "Sensors", "ThingSpeak", "Power BI"] },
   { n: "03", tag: "Web · Full-stack", title: "Civil Site Management System", desc: "A web-based construction site management system with role-based access for Admin, Civil Engineer and Project Manager to manage site activities efficiently.", tech: ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "Bootstrap", "XAMPP"] },
   { n: "04", tag: "Hackathon · EdTech", title: "Gamified Learning Platform for Rural Education", desc: "Makes STEM learning engaging and accessible for rural students through gamification, multilingual content and offline-friendly functionality.", tech: ["React", "Node.js", "PWA"] },
-  { n: "05", tag: "AI · Concept", title: "Indian Railways Train Traffic Optimization", desc: "An AI-based project concept focused on optimizing train traffic management and improving railway scheduling efficiency.", tech: ["AI", "Optimization"] },
+  { n: "05", tag: "AI · Concept", title: "Indian Railways Train Traffic Optimization", desc: "An AI-based project concept focused on optimizing train traffic management and improving railway scheduling efficiency.", tech: [] },
 ];
 
 const certs = ["CSS", "Advanced Java Programming", "Software Testing", "Python", "C++", "Data Structures", "Object-Oriented Programming", "DBMS", "Operating Systems"];
