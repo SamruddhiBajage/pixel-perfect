@@ -16,33 +16,29 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const GITHUB = "https://github.com/";
-const LINKEDIN = "https://www.linkedin.com/";
-const EMAIL = "samruddhi.bajage@example.com";
-const RESUME = "/resume.pdf";
 
 const nav = ["Home", "About", "Education", "Skills", "Projects", "Experience", "Certifications", "Achievements", "Resume", "Contact"];
 
 const education = [
-  { years: "2024 – 2027", title: "B.Tech in Computer Engineering", place: "Vidyalankar Institute of Technology", note: "Currently pursuing", dot: "bg-terracotta" },
+  { years: "Currently pursuing", title: "B.Tech in Computer Engineering", place: "Vidyalankar Institute of Technology", note: "2024 – 2027", dot: "bg-terracotta" },
   { years: "Diploma", title: "Diploma in Computer Engineering", place: "Vidyalankar Polytechnic", note: "Percentage: 92.46%", dot: "bg-sage" },
-  { years: "SSC", title: "Secondary School Certificate", place: "Maharashtra State Board", note: "Percentage: 93%", dot: "bg-ink" },
+  { years: "SSC", title: "Secondary School Certificate", note: "Percentage: 93%", dot: "bg-ink" },
 ];
 
 const skills = [
   { cat: "Programming", items: ["Java", "Python", "C", "C++"] },
   { cat: "Web Technologies", items: ["HTML", "CSS", "JavaScript", "MERN basics"] },
   { cat: "Database", items: ["SQL", "DBMS"] },
-  { cat: "Core Computer Science", items: ["Data Structures", "Object-Oriented Programming", "Operating Systems"] },
-  { cat: "Tools", items: ["Git", "GitHub", "VS Code", "Google Colab"] },
+  { cat: "Core Computer Science", items: ["Data Structures", "OOP", "Operating Systems"] },
+  { cat: "Tools", items: ["Git", "GitHub"] },
 ];
 
 const projects = [
-  { n: "01", tag: "AI · Desktop", title: "AI File Organizer", desc: "A GUI-based file organization system that categorizes and organizes files based on their usage and helps maintain a structured file system.", tech: ["Python", "GUI", "Automation"] },
-  { n: "02", tag: "IoT · Cloud", title: "AirGuard – Smart Classroom Air Quality Monitoring", desc: "An IoT project using ESP32 and sensors to monitor air quality, temperature and humidity in classrooms, with cloud-based data visualization.", tech: ["ESP32", "IoT", "Sensors", "ThingSpeak", "Power BI"] },
+  { n: "01", tag: "AI · Desktop", title: "AI File Organizer", desc: "A GUI-based file organization system that categorizes and organizes files based on their usage and helps maintain a structured file system.", tech: ["AI", "GUI", "File Management"] },
+  { n: "02", tag: "IoT · Cloud", title: "AirGuard – Smart Classroom Air Quality Monitoring", desc: "An IoT-based classroom air-quality monitoring project using ESP32 and sensors to monitor environmental conditions such as air quality, temperature and humidity, with cloud-based data visualization.", tech: ["ESP32", "IoT", "Sensors", "ThingSpeak", "Power BI"] },
   { n: "03", tag: "Web · Full-stack", title: "Civil Site Management System", desc: "A web-based construction site management system with role-based access for Admin, Civil Engineer and Project Manager to manage site activities efficiently.", tech: ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "Bootstrap", "XAMPP"] },
   { n: "04", tag: "Hackathon · EdTech", title: "Gamified Learning Platform for Rural Education", desc: "Makes STEM learning engaging and accessible for rural students through gamification, multilingual content and offline-friendly functionality.", tech: ["React", "Node.js", "PWA"] },
-  { n: "05", tag: "AI · Concept", title: "Indian Railways Train Traffic Optimization", desc: "An AI-based project concept focused on optimizing train traffic management and improving railway scheduling efficiency.", tech: ["AI", "Optimization", "Scheduling"] },
+  { n: "05", tag: "AI · Concept", title: "Indian Railways Train Traffic Optimization", desc: "An AI-based project concept focused on optimizing train traffic management and improving railway scheduling efficiency.", tech: ["AI", "Optimization"] },
 ];
 
 const certs = ["CSS", "Advanced Java Programming", "Software Testing", "Python", "C++", "Data Structures", "Object-Oriented Programming", "DBMS", "Operating Systems"];
@@ -50,9 +46,9 @@ const certs = ["CSS", "Advanced Java Programming", "Software Testing", "Python",
 const achievements = [
   "Core member of the Technical Team",
   "NSS Core Team Member",
-  "Participated in multiple hackathons",
+  "Participated in hackathons",
   "Selected for Smart India Hackathon internal team",
-  "Participated in technical workshops and events",
+  "Technical workshops and events",
   "Fashion Show Team Member",
   "Basketball",
   "Volunteering and social activities",
@@ -99,15 +95,15 @@ function Index() {
       </header>
 
       <section id="home" className="max-w-6xl mx-auto px-6 pt-20 pb-24 reveal">
-        <p className={eyebrow + " mb-6"}>Computer Engineering Student · Mumbai, India</p>
+        <p className={eyebrow + " mb-6"}>B.Tech Computer Engineering · Vidyalankar Institute of Technology</p>
         <h1 className="font-display font-medium text-5xl md:text-7xl leading-[1.05] tracking-tight">Samruddhi Bajage<span className="text-terracotta">.</span></h1>
-        <p className="mt-6 max-w-[56ch] text-pretty text-ink-soft text-base md:text-lg">Computer Engineering student passionate about software development, artificial intelligence, web technologies and building practical solutions through technology.</p>
+        <p className="mt-6 max-w-[56ch] text-pretty text-ink-soft text-base md:text-lg">Computer Engineering student passionate about software development, artificial intelligence, web technologies, and building practical technology solutions.</p>
         <div className="mt-9 flex flex-wrap items-center gap-3">
           <a href="#projects" className="bg-terracotta text-primary-foreground text-sm px-5 py-2.5 rounded-full hover:bg-ink transition-colors">View My Projects</a>
-          <a href={RESUME} download className="bg-panel text-ink text-sm px-5 py-2.5 rounded-full ring-1 ring-ink/10 hover:ring-ink/30 transition-colors">Download Resume</a>
+          <button type="button" disabled title="Resume coming soon" className="bg-panel text-ink-soft text-sm px-5 py-2.5 rounded-full ring-1 ring-ink/10 cursor-not-allowed opacity-70">Download Resume</button>
           <span className="mx-1 h-6 w-px bg-line" />
-          <a href={GITHUB} target="_blank" rel="noreferrer" aria-label="GitHub" className="size-10 grid place-items-center rounded-full ring-1 ring-ink/10 hover:bg-ink hover:text-paper transition-colors"><GitHubIcon /></a>
-          <a href={LINKEDIN} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="size-10 grid place-items-center rounded-full ring-1 ring-ink/10 hover:bg-ink hover:text-paper transition-colors"><LinkedInIcon /></a>
+          <span title="Add your GitHub profile" aria-label="GitHub profile not added yet" className="size-10 grid place-items-center rounded-full ring-1 ring-ink/10 text-ink-soft opacity-60 cursor-not-allowed"><GitHubIcon /></span>
+          <span title="Add your LinkedIn profile" aria-label="LinkedIn profile not added yet" className="size-10 grid place-items-center rounded-full ring-1 ring-ink/10 text-ink-soft opacity-60 cursor-not-allowed"><LinkedInIcon /></span>
         </div>
       </section>
 
@@ -120,11 +116,11 @@ function Index() {
             <p className="mt-4 max-w-[56ch] text-pretty text-ink-soft">I like hands-on work — wiring up an ESP32, building a small web app, or untangling a tricky bug — and I learn best by building, breaking and rebuilding.</p>
             <div className="mt-8 flex flex-wrap gap-x-10 gap-y-3 text-sm">
               <div><span className="block font-display font-medium text-3xl">92.46%</span><span className="text-ink-soft">Diploma</span></div>
-              <div><span className="block font-display font-medium text-3xl">5+</span><span className="text-ink-soft">Projects built</span></div>
+              <div><span className="block font-display font-medium text-3xl">93%</span><span className="text-ink-soft">SSC</span></div>
               <div><span className="block font-display font-medium text-3xl">9</span><span className="text-ink-soft">Certifications</span></div>
             </div>
           </div>
-          <img src={desk} alt="A student engineer's desk with a laptop, ESP32 board and notebook" width={896} height={1120} loading="lazy" className="order-1 md:order-2 w-full aspect-[4/5] object-cover rounded-xl ring-1 ring-ink/5" />
+          <img src={desk} alt="Illustrative image of an engineering workspace with a laptop and microcontroller board" width={896} height={1120} loading="lazy" className="order-1 md:order-2 w-full aspect-[4/5] object-cover rounded-xl ring-1 ring-ink/5" />
         </div>
       </section>
 
@@ -137,7 +133,7 @@ function Index() {
               <div>
                 <p className="text-sm text-ink-soft">{e.years}</p>
                 <h3 className="font-display font-medium text-xl">{e.title}</h3>
-                <p className="text-ink-soft text-sm mt-1">{e.place}</p>
+                {"place" in e && <p className="text-ink-soft text-sm mt-1">{e.place}</p>}
                 <p className="text-sm mt-2 text-terracotta">{e.note}</p>
               </div>
             </div>
@@ -189,9 +185,8 @@ function Index() {
               <p className="text-sm text-ink-soft">Internship</p>
               <h3 className="font-display font-medium text-xl">Web &amp; App Development Intern · VocalsLocals</h3>
               <ul className="mt-3 space-y-2 text-ink-soft text-sm max-w-[60ch] list-disc pl-4">
-                <li>Worked on web and application development tasks across the product.</li>
-                <li>Gained hands-on exposure to MERN-stack technologies — MongoDB, Express, React and Node.js.</li>
-                <li>Collaborated with the team to build, test and improve features.</li>
+                <li>Experience in web and application development.</li>
+                <li>Exposure to MERN-related technologies.</li>
               </ul>
             </div>
           </div>
@@ -232,7 +227,10 @@ function Index() {
             <h2 className={h2}>The one-page version.</h2>
             <p className="mt-3 text-ink-soft max-w-[48ch]">Education, skills, projects and experience in a single PDF.</p>
           </div>
-          <a href={RESUME} download className="self-start md:self-auto bg-terracotta text-primary-foreground text-sm px-6 py-3 rounded-full hover:bg-ink transition-colors">Download Resume</a>
+          <div className="self-start md:self-auto flex flex-col items-start md:items-end gap-2">
+            <button type="button" disabled className="bg-terracotta/50 text-primary-foreground text-sm px-6 py-3 rounded-full cursor-not-allowed">Download Resume</button>
+            <span className="text-xs text-ink-soft">Resume PDF coming soon</span>
+          </div>
         </div>
       </section>
 
@@ -242,9 +240,9 @@ function Index() {
             <h2 className="font-display font-medium text-4xl leading-tight max-w-[20ch] text-balance">Let's build something worth keeping.</h2>
             <p className="mt-4 max-w-[48ch] text-paper/70">Open to internships, collaborations and interesting projects.</p>
             <div className="mt-8 space-y-3 text-sm">
-              <a href={`mailto:${EMAIL}`} className="block text-paper/80 hover:text-terracotta">{EMAIL}</a>
-              <a href={GITHUB} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-paper/80 hover:text-terracotta"><GitHubIcon /> GitHub</a>
-              <a href={LINKEDIN} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-paper/80 hover:text-terracotta"><LinkedInIcon /> LinkedIn</a>
+              <p className="text-paper/80"><span className="text-paper">Email</span> — Add your email</p>
+              <p className="flex items-center gap-2 text-paper/80"><GitHubIcon /> <span className="text-paper">GitHub</span> — Add your GitHub profile</p>
+              <p className="flex items-center gap-2 text-paper/80"><LinkedInIcon /> <span className="text-paper">LinkedIn</span> — Add your LinkedIn profile</p>
             </div>
           </div>
           <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); setSent(true); e.currentTarget.reset(); }}>
@@ -266,8 +264,8 @@ function Index() {
         <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
           <p>© 2026 Samruddhi Bajage. All rights reserved.</p>
           <div className="flex gap-4">
-            <a href={GITHUB} target="_blank" rel="noreferrer" aria-label="GitHub" className="hover:text-paper"><GitHubIcon /></a>
-            <a href={LINKEDIN} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hover:text-paper"><LinkedInIcon /></a>
+            <span title="Add your GitHub profile" aria-label="GitHub profile not added yet"><GitHubIcon /></span>
+            <span title="Add your LinkedIn profile" aria-label="LinkedIn profile not added yet"><LinkedInIcon /></span>
           </div>
         </div>
       </footer>
